@@ -61,7 +61,6 @@ class Gan ():
         # get random batched data_iterator
         # data = self._split_to_batches( self._shuffle( data_iterator ), batches )
 
-        print(type(self.generator_optimizer))
         trainers.IteratedTrainer ().run (
             core = [ self.generator_optimizer, self.discriminator_optimizer ],
             metrics = [ self._G_loss, self._D_loss,  self._graph.G_out],
